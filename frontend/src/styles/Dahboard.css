@@ -1,0 +1,111 @@
+
+@reference "tailwindcss";
+
+.dashboard {
+  @apply min-h-screen w-full box-border bg-gray-50 p-4 mt-10 text-gray-900 sm:p-6 lg:p-20;
+}
+
+.dashboard-header {
+  @apply mb-7 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center;
+}
+
+.dashboard-header h1 {
+  @apply mb-2 text-2xl font-bold tracking-tight sm:text-3xl;
+}
+
+.dashboard-header p {
+  @apply text-sm text-gray-500;
+}
+
+.dashboard-header button {
+  @apply bg-green-700 text-white hover:bg-green-800;
+}
+
+.stats-grid {
+  @apply mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4;
+}
+
+.stat-card {
+  @apply border-gray-200 shadow-sm transition-shadow hover:shadow-md;
+}
+
+.stat-value {
+  @apply mt-2 break-words text-2xl font-bold tracking-tight sm:text-3xl;
+}
+
+.stat-description {
+  @apply mt-2 text-sm text-gray-500;
+}
+
+.dashboard-lower {
+  @apply grid grid-cols-1 items-start gap-5 xl:grid-cols-2;
+}
+
+.sales-placeholder {
+  @apply flex min-h-64 flex-col items-center justify-center gap-3 text-center text-green-700;
+}
+
+.sales-placeholder p {
+  @apply font-semibold text-gray-800;
+}
+
+.sales-placeholder span {
+  @apply text-sm text-gray-500;
+}
+
+.orders-list {
+  @apply flex flex-col;
+}
+
+.order-row {
+  @apply flex items-center justify-between gap-4 border-b border-gray-100 py-4 last:border-b-0;
+}
+
+.order-info,
+.order-details {
+  @apply flex min-w-0 flex-col gap-1.5;
+}
+
+.order-info strong,
+.order-details strong {
+  @apply text-sm font-semibold;
+}
+
+.order-info span {
+  @apply text-xs text-gray-500;
+}
+
+.order-details {
+  @apply shrink-0 items-end text-right;
+}
+
+.order-status {
+  @apply rounded-full px-2.5 py-1 text-xs font-medium;
+}
+
+.order-status.pending {
+  @apply bg-amber-100 text-amber-800;
+}
+
+.order-status.completed {
+  @apply bg-green-100 text-green-800;
+}
+
+.order-status.processing {
+  @apply bg-blue-100 text-blue-800;
+}
+
+@media (max-width: 400px) {
+  .dashboard {
+    @apply p-3;
+  }
+
+  .order-row {
+    @apply gap-2;
+  }
+
+  .order-info strong,
+  .order-details strong {
+    @apply text-xs;
+  }
+}

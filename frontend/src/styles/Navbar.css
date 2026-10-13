@@ -1,0 +1,22 @@
+@reference '../index.css';
+
+.navi{
+    @apply fixed flex top-0 left-0 bg-blue-950 justify-between z-50 items-center p-5 w-full text-white;
+}
+.list{
+    @apply flex  gap-10 items-end;
+}
+.Regi {
+   @apply mt-2 p-6 bg-green-600 mb-2;}
+.Regi:hover {
+  @apply bg-orange-700;
+}
+.logi{
+ @apply mt-2 p-6 bg-orange-600 mb-2;
+}
+.logi:hover {
+  @apply bg-gray-700;
+}
+.Arua{
+    @apply text-white text-2xl;
+}
